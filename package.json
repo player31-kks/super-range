@@ -6,6 +6,10 @@
   "types": "dist/index.d.ts",
   "readmeFilename": "README.md",
   "description": "A simple range function",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/player31-kks/super-range"
+  },
   "keywords": [
     "typescript",
     "for",
