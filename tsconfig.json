@@ -1,0 +1,19 @@
+{
+    "include": ["src/index.ts"],
+    "exclude": ["node_modules/**/*.ts"],
+    "compilerOptions": {
+      "declaration": true,
+      "declarationMap": true,
+      "module": "ES6",
+      "outDir": "dist",
+      "rootDir": "src",
+      "sourceMap": true,
+      "target": "ES2016",
+      "strict": true,
+      "esModuleInterop": true,
+      "moduleResolution": "Node",
+      "forceConsistentCasingInFileNames": true,
+      "stripInternal": true,
+      "allowSyntheticDefaultImports": true
+    }
+}

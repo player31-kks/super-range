@@ -1,0 +1,59 @@
+{
+  "name": "super-range",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "readmeFilename": "README.md",
+  "description": "A simple range function",
+  "keywords": [
+    "typescript",
+    "for",
+    "range",
+    "super",
+    "super-range"
+  ],
+  "author": {
+    "name": "kkyo",
+    "email": "keumks0331@gmail.com"
+  },
+  "scripts": {
+    "prepack": "yarn build",
+    "build": "yarn clean && yarn build:tsc && yarn build:js",
+    "build:tsc": "yarn tsc --emitDeclarationOnly",
+    "build:js": "node build.js",
+    "clean": "rm -rf dist",
+    "test": "jest test"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.3",
+    "@types/node": "20.4.5",
+    "esbuild": "0.18.17",
+    "jest": "^29.6.1",
+    "ts-jest": "^29.1.1",
+    "typescript": "5.1.6"
+  },
+  "files": [
+    "dist"
+  ],
+  "jest": {
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "testRegex": "\\.spec\\.ts$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ]
+  }
+}
