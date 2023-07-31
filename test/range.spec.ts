@@ -2,6 +2,11 @@ import { range } from "../src/index";
 
 describe("range function test", () => {
   describe("one argument", () => {
+    it("should return empty array when limit is 0", () => {
+      const result = [...range(0)];
+      expect(result).toHaveLength(0);
+    });
+
     const result = [...range(5)]; //[0,1,2,3,4];
     it("should return length correctly", () => {
       expect(result).toHaveLength(5);
@@ -21,6 +26,16 @@ describe("range function test", () => {
   });
 
   describe("two argument", () => {
+    it("should return empty array when limit is 0", () => {
+      const result = [...range(0, 0)];
+      expect(result).toHaveLength(0);
+    });
+
+    it("should return empty array when limit is 0", () => {
+      const result = [...range(0, -5)];
+      expect(result).toHaveLength(5);
+    });
+
     const result = [...range(5, 10)]; //[5,6,7,8,9]
 
     it("should return length correctly", () => {
