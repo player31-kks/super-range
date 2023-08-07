@@ -33,7 +33,10 @@ const result2 = [...range(10, 3, -3)]; // [10,7,4]
 
 Using With for statement
 ```typescript 
- for (const element of range(5)) {
-        console.log(element)
-    }
+for (const element of range(5)) {
+    console.log(element)
+}
 ```
+
+## License
+The source code for the site is licensed under the MIT license, which you can find in the MIT-LICENSE.txt file.
